@@ -11,52 +11,57 @@
     <!-- Header -->
     <header class="header">
         <div class="logo">MOND <span>tandartspraktijk</span></div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">Vestigingen</a>
-            <a href="#">Contact</a>
-            <a href="#">Tandarts</a>
+            <a href="#">Inicio</a>
+            <div class="services-dropdown">
+                <a href="#">Servicios</a>
+                <div class="services-submenu">
+                    <a href="Servicios/servicio1.html">Servicio 1</a>
+                    <a href="#">Servicio 2</a>
+                    <a href="#">Servicio 3</a>
+                </div>
+            </div>
+            <a href="#">Acerca de</a>
+            <button class="contact-button">Contáctanos</button>
         </nav>
-        <div class="buttons">
-            <button>Neem Contact Op</button>
-            <button>Maak Een Afspraak</button>
-        </div>
-    </header>
+    </header>    
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Titel voor de homepage hier</h1>
-            <p>Hier komt een subtitel te staan over het bedrijf.</p>
+            <h1>Consultorio Odontológico</h1>
+            <p>Aquí va una subtítulo sobre la empresa.</p>
             <div class="hero-buttons">
-                <button>Neem Contact Op</button>
-                <button>Maak Een Afspraak</button>
+                <button>Contáctanos</button>
+                <button>Haz una Cita</button>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services">
-        <h2>Waar we goed in zijn</h2>
+        <h2>Servicios</h2>
         <div class="service-cards">
             <div class="card">
-                <img src="icon-bleaching.png" alt="Bleaching">
-                <h3>Bleaching</h3>
+                <img src="icon-bleaching.png" alt="Blanqueamiento">
+                <h3>Blanqueamiento</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="card">
-                <img src="icon-desinfectie.png" alt="Desinfectie">
-                <h3>Desinfectie</h3>
+                <img src="icon-desinfectie.png" alt="Desinfección">
+                <h3>Desinfección</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="card">
-                <img src="icon-implantaten.png" alt="Implantaten">
-                <h3>Implantaten</h3>
+                <img src="icon-implantaten.png" alt="Implantes">
+                <h3>Implantes</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="card">
-                <img src="icon-kroon.png" alt="Kroon - & brugwerk">
-                <h3>Kroon - & brugwerk</h3>
+                <img src="icon-kroon.png" alt="Coronas y Puentes">
+                <h3>Coronas y Puentes</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
@@ -64,32 +69,31 @@
 
     <!-- Map Section -->
     <section class="map">
-        <h2>Onze vestigingen</h2>
         <div id="map"></div>
         <div class="contact-info">
-            <h3>Medipolis</h3>
-            <p>Adres: Boomstedeweg 233, 2810 Kontich</p>
-            <p>Telefoon: +32 489 65 32 45</p>
-            <p>Email: medipolis@mond.be</p>
+            <h3>Información de Contacto</h3>
+            <p>Dirección: Calle Ejemplo, Ciudad</p>
+            <p>Teléfono: (123) 456-7890</p>
+            <p>Email: info@ejemplo.com</p>
         </div>
     </section>
 
     <!-- Blog Section -->
     <section class="blog">
-        <h2>Nieuws over mond</h2>
+        <h2>Novedades sobre odontología/Nosotros</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div class="blog-cards">
             <div class="blog-card">
-                <img src="blog1.jpg" alt="Blog image">
-                <h3>Titel van het blogbericht</h3>
-                <p>Gepost op 12 mei 2025</p>
-                <a href="#">Lees artikel</a>
+                <img src="blog1.jpg" alt="Imagen del blog">
+                <h3>Título del artículo del blog</h3>
+                <p>Publicado el 12 de mayo de 2025</p>
+                <a href="#">Leer artículo</a>
             </div>
             <div class="blog-card">
-                <img src="blog2.jpg" alt="Blog image">
-                <h3>Titel van het blogbericht</h3>
-                <p>Gepost op 12 mei 2025</p>
-                <a href="#">Lees artikel</a>
+                <img src="blog2.jpg" alt="Imagen del blog">
+                <h3>Título del artículo del blog</h3>
+                <p>Publicado el 12 de mayo de 2025</p>
+                <a href="#">Leer artículo</a>
             </div>
         </div>
     </section>
@@ -99,18 +103,18 @@
         <div class="footer-content">
             <div class="footer-logo">MOND tandartspraktijk</div>
             <div class="footer-info">
-                <p>Contactinfo</p>
-                <p>Straatnaam 28, 9080 Gent</p>
+                <p>Información de Contacto</p>
+                <p>Calle Nombre 28, 9080 Gent</p>
                 <p>+32 489 65 32 45</p>
                 <p>info@mond.be</p>
+                <p>CodeSoft</p>
             </div>
             <div class="footer-sitemap">
-                <p>Sitemap</p>
-                <a href="#">Home</a>
-                <a href="#">Vestigingen</a>
-                <a href="#">Voor tandartsen</a>
-                <a href="#">Vacatures</a>
-                <a href="#">Contact</a>
+                <a href="#">Inicio</a>
+                <a href="#">Ubicaciones</a>
+                <a href="#">Para dentistas</a>
+                <a href="#">Vacantes</a>
+                <a href="#">Contacto</a>
             </div>
         </div>
     </footer>
