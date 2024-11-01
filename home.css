@@ -72,6 +72,8 @@ body {
 
 .contact-button {
     background-color: #1e90ff;
+
+
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -93,7 +95,7 @@ body {
     cursor: pointer;
 }
 
-/* Sección del héroe */
+/* Sección del hero */
 .hero {
     background: url('imagenes/armario-medico-totalmente-equipado_1303-23913.avif') no-repeat center left/cover;
     height: 100vh;
@@ -129,6 +131,7 @@ body {
     background-color: #0d6efd;
 }
 
+/* Services Section */
 .services {
     padding: 60px 20px;
     text-align: center;
@@ -166,32 +169,67 @@ body {
     transform: translateY(-5px);
 }
 
-.map {
+/* Map Section */
+.map-section {
     display: flex;
-    padding: 60px 50px;
-    text-align: left;
     align-items: center;
-    gap: 30px;
     justify-content: space-between;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
 #map {
-    width: 55%;
-    height: 300px;
-    background: url('imagenes/download.jpg') no-repeat center center/cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 65%;
+    height: 400px;
+    background: url('imagenes/download.jpg') no-repeat center center/cover; /* Reemplaza con la URL de tu mapa */
 }
 
 .contact-info {
-    width: 40%;
-    height: 260px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    width: 35%;
+    padding: 30px;
+    background-color: white;
+    text-align: left;
+    position: relative;
 }
 
+.contact-info h3 {
+    font-size: 28px;
+    color: #2a2a2a;
+    margin: 0;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p i {
+    margin-right: 8px;
+    color: #4a90e2;
+}
+
+.route-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #4a90e2;
+    text-decoration: none;
+    border-bottom: 1px solid #4a90e2;
+    transition: color 0.3s;
+}
+
+.route-link:hover {
+    color: #2a2a2a;
+}
+
+/* Blog Section */
 .blog {
     padding: 60px 20px;
     text-align: center;
@@ -215,6 +253,11 @@ body {
     overflow: hidden;
     max-width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
 }
 
 .blog-card img {
@@ -246,6 +289,21 @@ body {
     background-color: #424141;
 }
 
+/* Imagen debajo del Blog Section */
+.blog-image {
+    padding: 20px;
+    text-align: center;
+}
+
+.blog-image img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Section */
 footer {
     background-color: #5e5e5e;
     color: #fff;
@@ -280,45 +338,44 @@ footer {
     text-decoration: underline;
 }
 
-/* Estilos de medios */
 @media (max-width: 768px) {
     .hamburger {
-        display: block; /* Mostrar el menú hamburguesa en pantallas pequeñas */
+        display: block; 
     }
 
     .navbar {
-        display: none; /* Ocultar el menú en pantallas pequeñas */
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        display: none;
+        flex-direction: column;
         position: absolute;
-        top: 60px; /* Colocar debajo del header */
+        top: 60px;
         right: 0;
         background-color: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        width: 100%; /* Ancho completo */
+        width: 100%;
     }
 
     #menu-toggle:checked + .hamburger + .navbar {
-        display: flex; /* Mostrar menú si está marcado */
+        display: flex;
     }
 
     .service-cards,
     .blog-cards {
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        flex-direction: column;
         align-items: center;
     }
 
     .map {
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        flex-direction: column;
         align-items: center;
     }
 
     #map {
-        width: 100%; /* Hacer el mapa más ancho */
-        height: 200px; /* Reducir la altura del mapa */
+        width: 100%;
+        height: 200px;
     }
 
     .contact-info {
-        width: 100%; /* Hacer la info de contacto más ancha */
-        height: auto; /* Cambiar la altura a auto */
+        width: 100%;
+        height: auto;
     }
 }
