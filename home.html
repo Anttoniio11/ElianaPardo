@@ -14,17 +14,16 @@
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="hamburger">&#9776;</label>
         <nav class="navbar">
-            <a href="home.html">Inicio</a>
+            <a class="navbarEnlace" href="home.html">Inicio   </a>
             <div class="services-dropdown">
-                <a href="#">Servicios</a>
+                <a class="navbarEnlace" href="#servicios">Servicios</a>
                 <div class="services-submenu">
                     <a href="Servicios/servicio1.html">Servicio 1</a>
                     <a href="#">Servicio 2</a>
                     <a href="#">Servicio 3</a>
                 </div>
             </div>
-            <a href="#">Acerca de</a>
-            <button class="contact-button">Contáctanos</button>
+            <a class="contact-button">Contáctanos</a>
         </nav>
     </header>    
 
@@ -41,37 +40,44 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section id="servicios" class="services">
         <h2>Servicios</h2>
         <div class="service-cards">
             <div class="card">
-                <img src="icon-bleaching.png" alt="Blanqueamiento">
+                <img src="imagenes/diente.svg" alt="Blanqueamiento">
                 <h3>Blanqueamiento</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+                <a class="contact-button" href="Servicios/servicio1.html" >Conoce Mas</a>
             </div>
             <div class="card">
-                <img src="icon-desinfectie.png" alt="Desinfección">
+                <img src="imagenes/diente.svg" alt="Desinfección">
                 <h3>Desinfección</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+                <a class="contact-button">Conoce Mas</a>
             </div>
             <div class="card">
-                <img src="icon-implantaten.png" alt="Implantes">
+                <img src="imagenes/diente.svg" alt="Implantes">
                 <h3>Implantes</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+                <a class="contact-button">Conoce Mas</a>
             </div>
             <div class="card">
-                <img src="icon-kroon.png" alt="Coronas y Puentes">
+                <img src="imagenes/diente.svg" alt="Coronas y Puentes">
                 <h3>Coronas y Puentes</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><br>
+                <a class="contact-button">Conoce Mas</a>
             </div>
         </div>
     </section>
 
     <!-- Map Section -->
+    <h2 class="mapaTitulo">¿Donde Encontrarnos?</h2>
     <section class="map-section">
-        <div id="map"></div>
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8145.037987958565!2d-73.6368114394151!3d4.1209315885900555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e2e3d5bd607bd%3A0x266e7fbba1f3a39!2sHomecenter%20%7C%20Villavicencio!5e0!3m2!1ses!2sco!4v1730528802859!5m2!1ses!2sco" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <div class="contact-info">
-            <h3>Medipolis</h3>
+            <h3>Bogota</h3>
             <p><i class="fa fa-map-marker"></i> Boomesteenweg 223, 2610 Kontich</p>
             <p><i class="fa fa-envelope"></i> medipolis@mond.be</p>
             <p><i class="fa fa-phone"></i> +32 469 65 32 15</p>
@@ -99,10 +105,19 @@
         </div>
     </section>
 
-    <!-- Imagen debajo del Blog Section -->
-    <section class="blog-image">
-        <img src="imagenes/images.jpg" alt="Imagen adicional del blog">
-    </section>
+    <!-- Carrusel --> 
+    <br><section>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="imagenes/download.jpg" alt="Imagen 1" class="carousel-image active">
+                <img src="imagenes/images.jpg" alt="Imagen 2" class="carousel-image">
+                <img src="imagenes/download.jpg" alt="Imagen 3" class="carousel-image">
+                <img src="imagenes/images.jpg" alt="Imagen 4" class="carousel-image">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </section><br>
 
     <!-- Footer -->
     <footer>
@@ -125,6 +140,11 @@
         </div>
     </footer>
 
+    <whatsapp-button numeroTelefono="573004701957" mensaje="Hola, necesito mas informacion"
+    positionBottom = "50" positionRight = "100" ></whatsapp-button>
+   
+    <script src="whatsapp-button.js"></script> 
     <script src="scripts.js"></script>
+    <script src="carrusel.js"></script>
 </body>
 </html>

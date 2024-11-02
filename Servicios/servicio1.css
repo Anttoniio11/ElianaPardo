@@ -11,6 +11,8 @@ body {
     overflow-x: hidden;
 }
 
+/* Header */
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -22,11 +24,13 @@ body {
     top: 0;
     z-index: 100;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #1e90ff;
 }
 
 .navbar {
@@ -35,10 +39,17 @@ body {
     gap: 15px;
 }
 
-.navbar a {
+.navbarEnlace {
     text-decoration: none;
     color: #333;
     margin: 0 5px;
+}
+
+.navbarEnlace:hover {
+    color: #1e90ff; /* Cambia el color del texto al pasar el mouse */
+    background-color: rgba(30, 144, 255, 0.1); /* Fondo ligero al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados para el fondo */
+    padding: 5px; /* Espacio interno para el efecto del fondo */
 }
 
 .services-dropdown {
@@ -49,12 +60,19 @@ body {
     display: none;
     position: absolute;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 100;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* Centrando el submenú */
+    min-width: 160px;
 }
 
 .services-dropdown:hover .services-submenu {
     display: block;
+    opacity: 1;
 }
 
 .services-submenu a {
@@ -62,26 +80,34 @@ body {
     padding: 10px;
     text-decoration: none;
     color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Centrar texto del submenú */
 }
 
 .services-submenu a:hover {
     background-color: #f0f0f0;
+    color: #1e90ff;
 }
 
 .contact-button {
-    background-color: #1e90ff;
-
-
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    display: inline-block; /* Asegura que se comporte como un bloque */
+    background-color: #1e90ff; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Eliminar subrayado */
+    transition: all 0.3s ease; /* Transición suave */
+    cursor: pointer; /* Cambiar el cursor a mano */
 }
 
 .contact-button:hover {
-    background-color: #0d6efd;
+    background-color: #0d6efd; /* Cambiar color al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de elevación */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
 }
+
 
 #menu-toggle {
     display: none;
@@ -93,22 +119,63 @@ body {
     cursor: pointer;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 80px;
+/* Responsive Header */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Ocultar por defecto */
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        align-items: center; /* Centrar elementos de la navbar */
+    }
+
+    #menu-toggle:checked + .navbar {
+        display: flex; /* Mostrar el menú al activar el checkbox */
+    }
+
+    .hamburger {
+        display: block; /* Mostrar el ícono del menú hamburguesa */
+        color: #333;
+    }
+
+    .services-dropdown {
+        width: 100%; /* Asegurar que el menú de servicios ocupe todo el ancho */
+        text-align: center; /* Centrar el texto en el menú */
+    }
+
+    .services-submenu {
+        position: relative; /* Para mantener la posición relativa */
+        width: auto; /* Ajustar el ancho automáticamente */
+        left: 50%; /* Comenzar a centrar desde la mitad */
+        transform: translateX(-50%); /* Centrar el submenú */
+        box-shadow: none; /* Eliminar sombra en la vista móvil */
+    }
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
+/* Nav */
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 80px;
+    }
 
-nav a {
-    color: rgb(133, 80, 255);
-    text-decoration: none;
-}
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
 
+    nav a {
+        color: rgb(133, 80, 255);
+        text-decoration: none;
+    }
+
+/* Hero */ 
 #hero {
     background: url('whitening-hero.jpg') no-repeat center center/cover;
     height: 300px;
@@ -153,6 +220,8 @@ h2 {
     text-align: center;
 }
 
+
+/* Footer */
 footer {
     background: #333;
     color: white;
