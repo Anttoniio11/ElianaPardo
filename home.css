@@ -158,7 +158,6 @@ body {
     }
 }
 
-
 /* Sección del hero */
 .hero {
     background: url('imagenes/armario-medico-totalmente-equipado_1303-23913.avif') no-repeat center left/cover;
@@ -169,6 +168,42 @@ body {
     padding-left: 60px;
     margin-top: 75px;
     text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Añadir una capa oscura */
+}
+
+.social-icons {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    margin-left: 30px;
 }
 
 .hero-text h1 {
@@ -183,16 +218,19 @@ body {
 }
 
 .hero-buttons button {
-    padding: 10px 15px;
+    padding: 10px 20px;
     border: none;
     color: #fff;
     background-color: #1e90ff;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .hero-buttons button:hover {
     background-color: #0d6efd;
+    transform: scale(1.05);
 }
 
 /* Services Section */
@@ -242,7 +280,7 @@ body {
 
     .map-section {
         display: flex;
-        align-items: stretch; /* Asegurar que los hijos ocupen toda la altura */
+        align-items: stretch;
         justify-content: space-between;
         background-color: #f9f9f9;
         border-radius: 10px;
@@ -254,14 +292,14 @@ body {
 
     #map {
         width: 65%;
-        height: 400px; /* Altura fija para el mapa */
-        position: relative; /* Posición relativa para el contenedor del mapa */
+        height: 400px;
+        position: relative;
     }
 
     .map-image {
-        width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-        height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
-        object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .contact-info {
@@ -271,8 +309,8 @@ body {
         text-align: left;
         position: relative;
         display: flex;
-        flex-direction: column; /* Asegura que el contenido esté en columna */
-        justify-content: center; /* Centra el contenido verticalmente */
+        flex-direction: column;
+        justify-content: center;
     }
 
     .contact-info h3 {
@@ -312,28 +350,51 @@ body {
 /* Blog Section */
 .blog {
     padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.blog-text {
+    flex: 1;
+    max-width: 300px;
     text-align: center;
 }
 
-.blog h2 {
+.blog-text h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-.blog-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.blog-text p {
+    color: #555;
+    line-height: 1.6;
 }
 
+.blog-cards {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas por defecto */
+    gap: 20px;
+}
+
+/* Cards styling */
 .blog-card {
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    max-width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
+    width: 100%;
+    max-width: 250px;
+    height: 320px;
 }
 
 .blog-card:hover {
@@ -345,28 +406,17 @@ body {
     height: auto;
 }
 
-.blog-card h3 {
-    padding: 10px;
-    font-size: 20px;
-}
-
 .blog-card p {
-    padding: 0 10px 10px;
-    color: #777;
-}
-
-.blog-card a {
-    display: block;
-    text-align: center;
     padding: 10px;
-    background-color: #5e5e5e;
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.3s;
+    color: #777;
+    text-align: center;
 }
 
-.blog-card a:hover {
-    background-color: #424141;
+/* Responsiveness */
+@media (max-width: 768px) {
+    .blog-cards {
+        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
 }
 
 /* Carrusel Section */
