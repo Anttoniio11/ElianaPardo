@@ -36,6 +36,12 @@ body {
     color: #1e90ff;
 }
 
+.logo span{
+    font-size: 15px;
+    font-weight: bold;
+    color: #1e90ff;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -214,17 +220,32 @@ section {
     margin: 20px;
     padding-top: 40px;
     scroll-margin-top: 80px;
+    /* background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
 }
 
 h2 {
     text-align: center;
     margin-bottom: 15px;
+    font-size: 28px;
+}
+
+p {
+    font-size: 16px;
 }
 
 .image-cards {
     display: flex;
     justify-content: center; /* Centra las imágenes */
     flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias filas */
+    margin-top: 25px;
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.image-cards .card:hover {
+    transform: scale(1.05); /* Aumentar el tamaño al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
 }
 
 .card {

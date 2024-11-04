@@ -36,6 +36,13 @@ body {
     color: #1e90ff;
 }
 
+
+.logo span{
+    font-size: 15px;
+    font-weight: bold;
+    color: #1e90ff;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -351,7 +358,6 @@ body {
         color: #2a2a2a;
     }
 
-
 /* Blog Section */
 .blog {
     padding: 60px 20px;
@@ -360,17 +366,13 @@ body {
 }
 
 .blog-content {
-    display: flex;
-    align-items: flex-start;
     max-width: 1200px;
-    gap: 40px;
+    text-align: center;
 }
 
-/* Estilo de texto del blog */
+/* Texto introductorio */
 .blog-text {
-    flex: 1;
-    max-width: 300px;
-    text-align: left;
+    margin-bottom: 40px;
 }
 
 .blog-text h2 {
@@ -383,57 +385,70 @@ body {
     line-height: 1.6;
 }
 
-/* Estilo de las tarjetas del blog */
-.blog-cards {
-    flex: 2;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+/* Estilo de las filas de trabajo */
+.blog-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.blog-row {
+    display: flex;
+    align-items: center;
     gap: 20px;
 }
 
-.blog-card {
-    border: 1px solid #ddd;
+.blog-image img {
+    width: 100%;
+    max-width: 400px;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-    width: 100%;
-    max-width: 250px;
-    height: 320px;
+    transition: transform 0.3s ease;
 }
 
-.blog-card:hover {
-    transform: translateY(-5px);
+.blog-image img:hover {
+    transform: scale(1.05); 
 }
 
-.blog-card img {
-    width: 100%;
-    height: auto;
+.blog-description {
+    flex: 1;
+    text-align: left;
 }
 
-.blog-card p {
-    padding: 10px;
+.blog-description h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.blog-description p {
     color: #777;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 /* Responsiveness */
 @media (max-width: 768px) {
-    .blog-content {
+    .blog-row {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
-    .blog-cards {
-        grid-template-columns: 1fr;
+    .blog-image {
+        order: -1;
     }
 
-    .blog-text {
-        max-width: 100%;
+    .blog-description {
+        text-align: center;
+        order: 1;
+    }
+
+    /* Centrar encabezado y párrafos */
+    .blog-description h3,
+    .blog-description p {
         text-align: center;
     }
 }
+
 
 /* Carrusel Section */
 
