@@ -162,11 +162,9 @@ body {
 }
 
 /* Navegación */
-nav {
-    margin-top: 80px; /* Espacio para el header */
-    background: #fff;
+main{
+    margin-top: 95px;
 }
-
 nav ul {
     display: flex;
     justify-content: center;
@@ -190,7 +188,7 @@ nav a:hover {
 
 /* Hero Section */
 #hero {
-    background-image: url('../imagenes/armario-medico-totalmente-equipado_1303-23913.avif'); /* Asegúrate de tener esta imagen */
+    background-image: url('../imagenes/blanqueamiento-dental-rapido-que-hacer-si-vas-a-un-evento-y-necesitas-una-solucion-en-poco-tiempo.jpg'); /* Asegúrate de tener esta imagen */
     height: 400px; /* Altura de la sección */
     display: flex;
     justify-content: center;
@@ -214,6 +212,8 @@ nav a:hover {
 section {
     padding: 20px;
     margin: 20px;
+    padding-top: 40px;
+    scroll-margin-top: 80px;
 }
 
 h2 {
@@ -298,15 +298,15 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-        align-items: center; /* Centrar elementos */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     nav ul {
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        flex-direction: column;
     }
 
     .card {
-        max-width: 90%; /* Ancho máximo más pequeño para móviles */
+        max-width: 90%;
     }
 }
