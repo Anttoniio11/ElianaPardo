@@ -44,7 +44,7 @@ class MiWhatsAppButton extends HTMLElement {
                 }
             </style>
             <a href="https://wa.me/${numeroTelefono}?text=${mensajeCodificado}" class="boton-whatsapp" target="blank">
-                <img src="imagenes/logoWhatsApp.jpeg" alt="whatsapp">
+                <img src="../imagenes/logoWhatsApp.jpeg" alt="whatsapp">
             </a>
         `;
 
